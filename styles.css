@@ -106,18 +106,19 @@ body {
 
 /* === MENU GRIDS === */
 .menu-grid {
-    display: grid;
+    display: grid !important;
     gap: 10px;
+    width: 100%;
     max-width: 400px;
     margin: 0 auto;
 }
 
 .mode-grid-4 {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr !important;
 }
 
 .diff-grid-3 {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr !important;
 }
 
 .menu-btn {
@@ -500,12 +501,48 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+.study-car-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.study-corner-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 44px 44px 0 0;
+    border-color: #e63946 transparent transparent transparent;
+    z-index: 2;
+}
+
+.study-corner-number::after {
+    content: attr(data-number);
+    position: absolute;
+}
+
+/* Use a different approach for the number text */
+.study-card .study-corner-number {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-width: 0;
+    background: linear-gradient(135deg, #e63946 50%, transparent 50%);
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px 0 0 5px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: #fff;
+}
+
 .study-car-img {
     width: 100%;
     height: 140px;
     object-fit: contain;
     padding: 10px;
-    /* background: #f8f9fa; */
 }
 
 .study-info {
@@ -513,17 +550,22 @@ body {
     text-align: center;
 }
 
-.study-number {
-    font-size: 1.2rem;
-    font-weight: 900;
-    color: #e63946;
-}
-
 .study-name {
     font-size: 1rem;
     font-weight: 700;
     color: #1a1a2e;
     margin: 4px 0;
+}
+
+.study-team-text {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.study-engine-text {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 2px;
 }
 
 .study-logos {
@@ -535,13 +577,13 @@ body {
 }
 
 .study-manufacturer-logo {
-    height: 20px;
+    height: 16px;
     width: auto;
     object-fit: contain;
 }
 
 .study-team-logo {
-    height: 25px;
+    height: 35px;
     width: auto;
     object-fit: contain;
 }
