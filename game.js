@@ -157,20 +157,28 @@ function showStudyMode() {
         const card = document.createElement("div");
         card.className = "study-card";
         card.innerHTML = `
-            <div class="study-car-container">
-                <div class="study-corner-number">${driver.number}</div>
-                <img src="img/cars/car_${driver.number}.png" alt="Car #${driver.number}" class="study-car-img" />
-            </div>
-            <div class="study-info">
-                <div class="study-name">${driver.name}</div>
-                <div class="study-team-text">${driver.team}</div>
-                <div class="study-engine-text">${driver.engine}</div>
-                <div class="study-logos">
-                    <img src="${manufacturerLogos[driver.engine]}" alt="${driver.engine}" class="study-manufacturer-logo" />
-                    <img src="${teamLogos[driver.team]}" alt="${driver.team}" class="study-team-logo" />
+            <div class="study-card-inner">
+                <div class="study-card-front">
+                    <div class="study-car-container">
+                        <div class="study-corner-number">${driver.number}</div>
+                        <img src="img/cars/car_${driver.number}.png" alt="Car #${driver.number}" class="study-car-img" />
+                    </div>
+                    <div class="study-info">
+                        <div class="study-name">${driver.name}</div>
+                        <div class="study-team-text">${driver.team}</div>
+                        <div class="study-engine-text">${driver.engine}</div>
+                        <div class="study-logos">
+                            <img src="${manufacturerLogos[driver.engine]}" alt="${driver.engine}" class="study-manufacturer-logo" />
+                            <img src="${teamLogos[driver.team]}" alt="${driver.team}" class="study-team-logo" />
+                        </div>
+                    </div>
+                </div>
+                <div class="study-card-back">
+                    <div class="study-card-back-number">#${driver.number}</div>
                 </div>
             </div>
         `;
+        card.addEventListener("click", () => card.classList.toggle("flipped"));
         studyGrid.appendChild(card);
     });
     
