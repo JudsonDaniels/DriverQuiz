@@ -448,9 +448,9 @@ function showResults() {
         resultsMessage.textContent = "Back to the garage...";
     }
     
-    // Save high score
-    saveHighScore(gameState.mode, gameState.difficulty, gameState.score, percent);
-    displayHighScores();
+    // Save high score (disabled)
+    // saveHighScore(gameState.mode, gameState.difficulty, gameState.score, percent);
+    // displayHighScores();
     
     showScreen(resultsScreen);
 }
