@@ -496,50 +496,37 @@ body {
 }
 
 .study-card {
-    perspective: 1000px;
     cursor: pointer;
-}
-
-.study-card-inner {
-    position: relative;
     border: 2px solid #e0e0e0;
     border-radius: 12px;
+    overflow: hidden;
     background: #fff;
-    transition: transform 0.6s ease;
-    transform-style: preserve-3d;
+    transition: box-shadow 0.2s;
 }
 
-.study-card.flipped .study-card-inner {
-    transform: rotateY(180deg);
+.study-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .study-card-front {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
+    display: block;
 }
 
 .study-card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transform: rotateY(180deg);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    display: flex;
+    display: none;
+    padding: 20px;
+    background: #1a1a2e;
+    min-height: 160px;
     align-items: center;
     justify-content: center;
-    background: #1a1a2e;
-    border-radius: 10px;
-    padding: 20px;
-    overflow: hidden;
 }
 
-/* Hide front when flipped */
 .study-card.flipped .study-card-front {
-    visibility: hidden;
+    display: none;
+}
+
+.study-card.flipped .study-card-back {
+    display: flex;
 }
 
 .study-back-content {
