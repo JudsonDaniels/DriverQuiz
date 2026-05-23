@@ -499,37 +499,54 @@ body {
 }
 
 .study-card {
+    perspective: 800px;
     cursor: pointer;
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #fff;
-    transition: box-shadow 0.2s;
+    height: 220px;
 }
 
 .study-card:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.study-card-front {
-    display: block;
+.study-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
 }
 
+.study-card.flipped .study-card-inner {
+    transform: rotateY(180deg);
+}
+
+.study-card-front,
 .study-card-back {
-    display: none;
-    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
     background: #fff;
-    min-height: 160px;
+}
+
+.study-card-front {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.study-card.flipped .study-card-front {
-    display: none;
-}
-
-.study-card.flipped .study-card-back {
+.study-card-back {
+    transform: rotateY(180deg);
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .study-back-content {
@@ -574,6 +591,11 @@ body {
 .study-car-container {
     position: relative;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .study-corner-number {
