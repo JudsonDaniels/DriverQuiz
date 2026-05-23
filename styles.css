@@ -271,6 +271,7 @@ body {
 /* === FLOATING POINTS ANIMATION === */
 .points-float {
     position: absolute;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 1.5rem;
     font-weight: 900;
     color: #28a745;
@@ -408,6 +409,7 @@ body {
 /* === STREAK FLOAT === */
 .streak-float {
     position: absolute;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 1.1rem;
     font-weight: 900;
     color: #f39c12;
@@ -487,7 +489,7 @@ body {
     height: 140px;
     object-fit: contain;
     padding: 10px;
-    background: #f8f9fa;
+    /* background: #f8f9fa; */
 }
 
 .study-info {
