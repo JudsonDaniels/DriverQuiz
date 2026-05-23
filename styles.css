@@ -104,46 +104,20 @@ body {
     flex-wrap: wrap;
 }
 
-/* === MODE 2x2 GRID === */
-.mode-grid {
+/* === MENU GRIDS === */
+.menu-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 10px;
-    max-width: 320px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
-/* === DIFFICULTY TOGGLE SWITCH === */
-.toggle-switch {
-    display: inline-flex;
-    border: 2px solid #1a1a2e;
-    border-radius: 8px;
-    overflow: hidden;
+.mode-grid-4 {
+    grid-template-columns: 1fr 1fr;
 }
 
-.toggle-btn {
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: 600;
-    background: #fff;
-    color: #333;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border-right: 1px solid #ddd;
-}
-
-.toggle-btn:last-child {
-    border-right: none;
-}
-
-.toggle-btn:hover {
-    background: #f0f0f0;
-}
-
-.toggle-btn.selected {
-    background: #e63946;
-    color: #fff;
+.diff-grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .menu-btn {
