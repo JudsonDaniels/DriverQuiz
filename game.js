@@ -225,7 +225,12 @@ function handleAnswer(btn, isCorrect, correctAnswer) {
     });
     
     if (isCorrect) {
-        const pointsEarned = gameState.timeRemaining * 10;
+        // Normalize score: percentage of time remaining × difficulty multiplier × 100
+        // Easy=1x, Medium=2x, Hard=3x — rewards speed AND difficulty
+        const difficultyMultiplier = { easy: 1, medium: 2, hard: 3 };
+        const multiplier = difficultyMultiplier[gameState.difficulty] || 1;
+        const percentTimeLeft = gameState.timeRemaining / (gameState.timeLimit * 10);
+        const pointsEarned = Math.round(percentTimeLeft * multiplier * 100);
         gameState.score += pointsEarned;
         gameState.correctCount++;
         btn.classList.add("correct");
