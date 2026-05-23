@@ -271,7 +271,7 @@ body {
 /* === FLOATING POINTS ANIMATION === */
 .points-float {
     position: absolute;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
     font-size: 1.5rem;
     font-weight: 900;
     color: #28a745;
@@ -409,7 +409,7 @@ body {
 /* === STREAK FLOAT === */
 .streak-float {
     position: absolute;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
     font-size: 1.1rem;
     font-weight: 900;
     color: #f39c12;
