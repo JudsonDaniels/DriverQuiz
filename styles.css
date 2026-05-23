@@ -65,11 +65,13 @@ body {
 }
 
 .title {
-    font-family: 'Racing Sans One', cursive;
+    font-family: 'Oswald', sans-serif;
     font-size: 3rem;
-    font-weight: 400;
+    font-weight: 700;
+    font-style: italic;
     color: #1a1a2e;
     letter-spacing: 2px;
+    text-transform: uppercase;
     margin-bottom: 5px;
 }
 
@@ -127,8 +129,12 @@ body {
     border: 2px solid #ddd;
     border-radius: 8px;
     background: #fff;
-    font-size: 1rem;
-    font-weight: 600;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.2s ease;
     color: #333;
