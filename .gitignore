@@ -1,0 +1,3 @@
+# Exclude raw extracted images (only keep named car_*.png files)
+img/cars/car-*.png
+img/cars/page-*.png

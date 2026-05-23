@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indy 500 Flashcard Game - 110th Running</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menu Screen -->
+    <div id="menu-screen" class="screen active">
+        <div class="menu-container">
+            <h1 class="title">Flashcard Challenge</h1>
+            <br></br>
+            <img src="img/logo.svg.png" alt="Indy 500 Logo" class="menu-logo" />
+            <br></br>
+            <div class="menu-section">
+                <h3>Difficulty</h3>
+                <div class="button-group">
+                    <button class="menu-btn difficulty-btn" data-difficulty="easy" data-time="10">
+                        <span class="flag green-flag"></span> Easy
+                    </button>
+                    <button class="menu-btn difficulty-btn selected" data-difficulty="medium" data-time="5">
+                        <span class="flag yellow-flag"></span> Medium
+                    </button>
+                    <button class="menu-btn difficulty-btn" data-difficulty="hard" data-time="3">
+                        <span class="flag red-flag"></span> Hard
+                    </button>
+                </div>
+            </div>
+
+            <!-- <div class="menu-section">
+                <h3>Number of Cars</h3>
+                <div class="button-group">
+                    <button class="menu-btn cards-btn" data-cards="10">10 Cars</button>
+                    <button class="menu-btn cards-btn" data-cards="20">20 Cars</button>
+                    <button class="menu-btn cards-btn selected" data-cards="33">Full Field (33)</button>
+                </div>
+            </div> -->
+
+            <button id="start-btn" class="start-btn">
+                BEGIN
+            </button>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+        <div class="game-header">
+            <div class="progress-info">
+                <span id="question-counter">1 / 33</span>
+            </div>
+            <div class="timer-container">
+                <div id="timer-bar" class="timer-bar"></div>
+                <span id="timer-text" class="timer-text">5s</span>
+            </div>
+            <div class="score-info">
+                <span id="score-display">Score: 0</span>
+            </div>
+        </div>
+
+        <div class="game-body">
+            <div id="car-display-text" class="car-display-text">
+                <h1>Who's this driver?</h1>
+            </div>
+
+            <div id="car-display" class="car-display">
+                <!-- SVG car will be injected here -->
+            </div>
+
+            <div id="choices" class="choices">
+                <!-- Choice buttons injected here -->
+            </div>
+
+            <div id="feedback" class="feedback hidden"></div>
+                
+            <button id="continue-btn" class="continue-btn hidden">Next</button>
+        </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="results-screen" class="screen">
+        <div class="results-container">
+            <div id="results-icon" class="results-icon"></div>
+            <h1 id="results-title" class="results-title"></h1>
+            <p id="results-message" class="results-message"></p>
+            <div id="results-score" class="results-score"></div>
+            <div id="results-details" class="results-details"></div>
+            <button id="play-again-btn" class="start-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
