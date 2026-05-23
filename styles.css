@@ -394,6 +394,165 @@ body {
     background: #e63946;
 }
 
+/* === MANUFACTURER MODE === */
+.choices.manufacturer-mode {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 400px;
+}
+
+.manufacturer-logo {
+    max-height: 50px;
+}
+
+/* === STREAK FLOAT === */
+.streak-float {
+    position: absolute;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #f39c12;
+    pointer-events: none;
+    animation: floatUp 1.5s ease-out forwards;
+    z-index: 200;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    white-space: nowrap;
+}
+
+/* === CONFETTI === */
+.confetti {
+    position: fixed;
+    top: -10px;
+    z-index: 999;
+    border-radius: 2px;
+    animation: confettiFall linear forwards;
+    pointer-events: none;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* === STUDY MODE === */
+.study-container {
+    width: 100%;
+    max-width: 900px;
+    padding: 30px 20px;
+    margin: 0 auto;
+}
+
+.study-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.study-header h1 {
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.study-header p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.study-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.study-card {
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.2s;
+}
+
+.study-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.study-car-img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    padding: 10px;
+    background: #f8f9fa;
+}
+
+.study-info {
+    padding: 12px;
+    text-align: center;
+}
+
+.study-number {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #e63946;
+}
+
+.study-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 4px 0;
+}
+
+.study-team {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.study-engine {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 2px;
+}
+
+/* === HIGH SCORES === */
+.high-scores {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.high-scores h3 {
+    margin-bottom: 10px;
+    color: #1a1a2e;
+}
+
+.scores-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.scores-table th,
+.scores-table td {
+    padding: 6px 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.scores-table th {
+    background: #1a1a2e;
+    color: #fff;
+    font-weight: 600;
+}
+
+.scores-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
 /* === RESULTS SCREEN === */
 .results-container {
     text-align: center;

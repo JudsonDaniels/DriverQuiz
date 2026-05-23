@@ -11,17 +11,23 @@
     <div id="menu-screen" class="screen active">
         <div class="menu-container">
             <h1 class="title">Flashcard Challenge</h1>
-            <br></br>
+            <br>
             <img src="img/logo.svg.png" alt="Indy 500 Logo" class="menu-logo" />
-            <br></br>
+            <br>
             <div class="menu-section">
-                <h3>Gameplay</h3>
+                <h3>Game Mode</h3>
                 <div class="button-group">
                     <button class="menu-btn mode-btn selected" data-mode="driver">
-                        Drivers
+                        🏎️ Driver
                     </button>
                     <button class="menu-btn mode-btn" data-mode="team">
-                        Teams
+                        🏁 Team
+                    </button>
+                    <button class="menu-btn mode-btn" data-mode="manufacturer">
+                        🔧 Manufacturer
+                    </button>
+                    <button class="menu-btn mode-btn" data-mode="study">
+                        📖 Study
                     </button>
                 </div>
             </div>
@@ -40,15 +46,6 @@
                     </button>
                 </div>
             </div>
-
-            <!-- <div class="menu-section">
-                <h3>Number of Cars</h3>
-                <div class="button-group">
-                    <button class="menu-btn cards-btn" data-cards="10">10 Cars</button>
-                    <button class="menu-btn cards-btn" data-cards="20">20 Cars</button>
-                    <button class="menu-btn cards-btn selected" data-cards="33">Full Field (33)</button>
-                </div>
-            </div> -->
 
             <button id="start-btn" class="start-btn">
                 BEGIN
@@ -73,11 +70,11 @@
 
         <div class="game-body">
             <div id="car-display-text" class="car-display-text">
-                <h1>Who's this driver?</h1>
+                <h1>Who drives this car?</h1>
             </div>
 
             <div id="car-display" class="car-display">
-                <!-- SVG car will be injected here -->
+                <!-- Car image injected here -->
             </div>
 
             <div id="choices" class="choices">
@@ -90,6 +87,20 @@
         </div>
     </div>
 
+    <!-- Study Screen -->
+    <div id="study-screen" class="screen">
+        <div class="study-container">
+            <div class="study-header">
+                <h1>📖 Study Mode</h1>
+                <p>Browse all 33 cars and their drivers</p>
+                <button id="study-back-btn" class="menu-btn">← Back to Menu</button>
+            </div>
+            <div id="study-grid" class="study-grid">
+                <!-- Cards injected by JS -->
+            </div>
+        </div>
+    </div>
+
     <!-- Results Screen -->
     <div id="results-screen" class="screen">
         <div class="results-container">
@@ -98,6 +109,7 @@
             <p id="results-message" class="results-message"></p>
             <div id="results-score" class="results-score"></div>
             <div id="results-details" class="results-details"></div>
+            <div id="high-scores" class="high-scores"></div>
             <button id="play-again-btn" class="start-btn">Play Again</button>
         </div>
     </div>
