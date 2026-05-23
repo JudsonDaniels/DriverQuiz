@@ -510,15 +510,24 @@ body {
     margin: 4px 0;
 }
 
-.study-team {
-    font-size: 0.85rem;
-    color: #555;
+.study-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    padding: 4px 8px;
 }
 
-.study-engine {
-    font-size: 0.8rem;
-    color: #888;
-    margin-top: 2px;
+.study-manufacturer-logo {
+    height: 20px;
+    width: auto;
+    object-fit: contain;
+}
+
+.study-team-logo {
+    height: 25px;
+    width: auto;
+    object-fit: contain;
 }
 
 /* === HIGH SCORES === */

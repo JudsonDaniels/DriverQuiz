@@ -161,8 +161,10 @@ function showStudyMode() {
             <div class="study-info">
                 <div class="study-number">#${driver.number}</div>
                 <div class="study-name">${driver.name}</div>
-                <div class="study-team">${driver.team}</div>
-                <div class="study-engine">${driver.engine}</div>
+                <div class="study-logos">
+                    <img src="${manufacturerLogos[driver.engine]}" alt="${driver.engine}" class="study-manufacturer-logo" />
+                    <img src="${teamLogos[driver.team]}" alt="${driver.team}" class="study-team-logo" />
+                </div>
             </div>
         `;
         studyGrid.appendChild(card);
