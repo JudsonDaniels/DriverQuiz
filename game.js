@@ -163,7 +163,9 @@ function showStudyMode() {
                         <div class="study-corner-number">${driver.number}</div>
                         <img src="img/cars/car_${driver.number}.png" alt="Car #${driver.number}" class="study-car-img" />
                     </div>
-                    <div class="study-info">
+                </div>
+                <div class="study-card-back">
+                    <div class="study-back-content">
                         <div class="study-name">${driver.name}</div>
                         <div class="study-team-text">${driver.team}</div>
                         <div class="study-engine-text">${driver.engine}</div>
@@ -172,9 +174,6 @@ function showStudyMode() {
                             <img src="${teamLogos[driver.team]}" alt="${driver.team}" class="study-team-logo" />
                         </div>
                     </div>
-                </div>
-                <div class="study-card-back">
-                    <div class="study-card-back-number">#${driver.number}</div>
                 </div>
             </div>
         `;

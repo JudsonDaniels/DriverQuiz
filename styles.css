@@ -536,13 +536,37 @@ body {
     justify-content: center;
     background: #1a1a2e;
     border-radius: 10px;
+    padding: 20px;
 }
 
-.study-card-back-number {
-    font-size: 4rem;
-    font-weight: 900;
+.study-back-content {
+    text-align: center;
     color: #fff;
-    font-style: italic;
+}
+
+.study-back-content .study-name {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.study-back-content .study-team-text {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.study-back-content .study-engine-text {
+    color: #aaa;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+.study-back-content .study-logos {
+    margin-top: 12px;
+}
+
+.study-back-content .study-manufacturer-logo {
+    filter: brightness(0) invert(1);
 }
 
 .study-car-container {
