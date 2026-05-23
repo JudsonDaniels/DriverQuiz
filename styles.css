@@ -388,6 +388,26 @@ body {
     opacity: 0.7;
 }
 
+/* === TEAM MODE CHOICES === */
+.choices.team-mode {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.team-choice-btn {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+}
+
+.team-logo-choice {
+    max-width: 100%;
+    max-height: 60px;
+    object-fit: contain;
+}
+
 .continue-btn {
     padding: 12px 30px;
     font-size: 1rem;
@@ -456,6 +476,10 @@ body {
     .choices {
         grid-template-columns: 1fr;
         gap: 8px;
+    }
+
+    .choices.team-mode {
+        grid-template-columns: 1fr 1fr;
     }
 
     .choice-btn {

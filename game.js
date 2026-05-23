@@ -1,42 +1,63 @@
 // === DRIVER DATA ===
 const drivers = [
-    { number: "10", name: "Alex Palou", engine: "Honda", color1: "#0057B8", color2: "#00A3E0" },
-    { number: "20", name: "Alexander Rossi", engine: "Chevrolet", color1: "#FFD700", color2: "#1C1C1C" },
-    { number: "12", name: "David Malukas", engine: "Chevrolet", color1: "#E4002B", color2: "#FFFFFF" },
-    { number: "60", name: "Felix Rosenqvist", engine: "Honda", color1: "#00205B", color2: "#69BE28" },
-    { number: "14", name: "Santino Ferrucci", engine: "Chevrolet", color1: "#C8102E", color2: "#FFFFFF" },
-    { number: "5", name: "Pato O'Ward", engine: "Chevrolet", color1: "#FF6B00", color2: "#00A651" },
-    { number: "8", name: "Kyffin Simpson", engine: "Honda", color1: "#003DA5", color2: "#FFD100" },
-    { number: "23", name: "Conor Daly", engine: "Chevrolet", color1: "#E31937", color2: "#002F6C" },
-    { number: "3", name: "Scott McLaughlin", engine: "Chevrolet", color1: "#FFE600", color2: "#E4002B" },
-    { number: "9", name: "Scott Dixon", engine: "Honda", color1: "#0033A0", color2: "#CE0E2D" },
-    { number: "76", name: "Rinus VeeKay", engine: "Chevrolet", color1: "#FF8200", color2: "#003DA5" },
-    { number: "75", name: "Takuma Sato", engine: "Honda", color1: "#FFFFFF", color2: "#E60012" },
-    { number: "33", name: "Ed Carpenter", engine: "Chevrolet", color1: "#5C068C", color2: "#FFD100" },
-    { number: "06", name: "Helio Castroneves", engine: "Honda", color1: "#FFD700", color2: "#E4002B" },
-    { number: "21", name: "Christian Rasmussen", engine: "Chevrolet", color1: "#00529B", color2: "#FFFFFF" },
-    { number: "66", name: "Marcus Armstrong", engine: "Honda", color1: "#1D1D1B", color2: "#E4002B" },
-    { number: "28", name: "Marcus Ericsson", engine: "Honda", color1: "#003DA5", color2: "#FFD100" },
-    { number: "7", name: "Christian Lundgaard", engine: "Chevrolet", color1: "#E4002B", color2: "#1C1C1C" },
-    { number: "26", name: "Will Power", engine: "Honda", color1: "#CE0E2D", color2: "#FFFFFF" },
-    { number: "6", name: "Nolan Siegel", engine: "Chevrolet", color1: "#003DA5", color2: "#00A3E0" },
-    { number: "45", name: "Louis Foster", engine: "Honda", color1: "#00843D", color2: "#FFFFFF" },
-    { number: "31", name: "Ryan Hunter-Reay", engine: "Chevrolet", color1: "#FF6B00", color2: "#002F6C" },
-    { number: "2", name: "Josef Newgarden", engine: "Chevrolet", color1: "#1C1C1C", color2: "#FFD700" },
-    { number: "18", name: "Romain Grosjean", engine: "Honda", color1: "#002F6C", color2: "#FFFFFF" },
-    { number: "27", name: "Kyle Kirkwood", engine: "Honda", color1: "#00A3E0", color2: "#1C1C1C" },
-    { number: "11", name: "Katherine Legge", engine: "Chevrolet", color1: "#8B008B", color2: "#FFD700" },
-    { number: "47", name: "Mick Schumacher", engine: "Honda", color1: "#1C1C1C", color2: "#00A651" },
-    { number: "15", name: "Graham Rahal", engine: "Honda", color1: "#E4002B", color2: "#002F6C" },
-    { number: "19", name: "Dennis Hauger", engine: "Honda", color1: "#002868", color2: "#EF3340" },
-    { number: "51", name: "Jacob Abel", engine: "Chevrolet", color1: "#00529B", color2: "#FFD100" },
-    { number: "77", name: "Sting Ray Robb", engine: "Chevrolet", color1: "#003DA5", color2: "#CE0E2D" },
-    { number: "4", name: "Caio Collet", engine: "Chevrolet", color1: "#009639", color2: "#FFD100" },
-    { number: "24", name: "Jack Harvey", engine: "Chevrolet", color1: "#1C1C1C", color2: "#E4002B" }
+    { number: "10", name: "Alex Palou", team: "Chip Ganassi Racing", engine: "Honda", color1: "#0057B8", color2: "#00A3E0" },
+    { number: "20", name: "Alexander Rossi", team: "ECR", engine: "Chevrolet", color1: "#FFD700", color2: "#1C1C1C" },
+    { number: "12", name: "David Malukas", team: "Penske", engine: "Chevrolet", color1: "#E4002B", color2: "#FFFFFF" },
+    { number: "60", name: "Felix Rosenqvist", team: "Meyer Shank Racing", engine: "Honda", color1: "#00205B", color2: "#69BE28" },
+    { number: "14", name: "Santino Ferrucci", team: "A.J. Foyt Enterprises", engine: "Chevrolet", color1: "#C8102E", color2: "#FFFFFF" },
+    { number: "5", name: "Pato O'Ward", team: "Arrow McClaren", engine: "Chevrolet", color1: "#FF6B00", color2: "#00A651" },
+    { number: "8", name: "Kyffin Simpson", team: "Chip Ganassi Racing", engine: "Honda", color1: "#003DA5", color2: "#FFD100" },
+    { number: "23", name: "Conor Daly", team: "Dreyer & Reinbold Racing", engine: "Chevrolet", color1: "#E31937", color2: "#002F6C" },
+    { number: "3", name: "Scott McLaughlin", team: "Penske", engine: "Chevrolet", color1: "#FFE600", color2: "#E4002B" },
+    { number: "9", name: "Scott Dixon", team: "Chip Ganassi Racing", engine: "Honda", color1: "#0033A0", color2: "#CE0E2D" },
+    { number: "76", name: "Rinus VeeKay", team: "Juncos Hollinger Racing", engine: "Chevrolet", color1: "#FF8200", color2: "#003DA5" },
+    { number: "75", name: "Takuma Sato", team: "Rahal Letterman Lanigan Racing", engine: "Honda", color1: "#FFFFFF", color2: "#E60012" },
+    { number: "33", name: "Ed Carpenter", team: "ECR", engine: "Chevrolet", color1: "#5C068C", color2: "#FFD100" },
+    { number: "06", name: "Helio Castroneves", team: "Meyer Shank Racing", engine: "Honda", color1: "#FFD700", color2: "#E4002B" },
+    { number: "21", name: "Christian Rasmussen", team: "ECR", engine: "Chevrolet", color1: "#00529B", color2: "#FFFFFF" },
+    { number: "66", name: "Marcus Armstrong", team: "Meyer Shank Racing", engine: "Honda", color1: "#1D1D1B", color2: "#E4002B" },
+    { number: "28", name: "Marcus Ericsson", team: "Andretti Global", engine: "Honda", color1: "#003DA5", color2: "#FFD100" },
+    { number: "7", name: "Christian Lundgaard", team: "Arrow McClaren", engine: "Chevrolet", color1: "#E4002B", color2: "#1C1C1C" },
+    { number: "26", name: "Will Power", team: "Andretti Global", engine: "Honda", color1: "#CE0E2D", color2: "#FFFFFF" },
+    { number: "6", name: "Nolan Siegel", team: "Arrow McClaren", engine: "Chevrolet", color1: "#003DA5", color2: "#00A3E0" },
+    { number: "45", name: "Louis Foster", team: "Rahal Letterman Lanigan Racing", engine: "Honda", color1: "#00843D", color2: "#FFFFFF" },
+    { number: "31", name: "Ryan Hunter-Reay", team: "Arrow McClaren", engine: "Chevrolet", color1: "#FF6B00", color2: "#002F6C" },
+    { number: "2", name: "Josef Newgarden", team: "Penske", engine: "Chevrolet", color1: "#1C1C1C", color2: "#FFD700" },
+    { number: "18", name: "Romain Grosjean", team: "Dale Coyne Racing", engine: "Honda", color1: "#002F6C", color2: "#FFFFFF" },
+    { number: "27", name: "Kyle Kirkwood", team: "Andretti Global", engine: "Honda", color1: "#00A3E0", color2: "#1C1C1C" },
+    { number: "11", name: "Katherine Legge", team: "HMD Motorsports", engine: "Chevrolet", color1: "#8B008B", color2: "#FFD700" },
+    { number: "47", name: "Mick Schumacher", team: "Rahal Letterman Lanigan Racing", engine: "Honda", color1: "#1C1C1C", color2: "#00A651" },
+    { number: "15", name: "Graham Rahal", team: "Rahal Letterman Lanigan Racing", engine: "Honda", color1: "#E4002B", color2: "#002F6C" },
+    { number: "19", name: "Dennis Hauger", team: "Dale Coyne Racing", engine: "Honda", color1: "#002868", color2: "#EF3340" },
+    { number: "51", name: "Jacob Abel", team: "Able Motorsports", engine: "Chevrolet", color1: "#00529B", color2: "#FFD100" },
+    { number: "77", name: "Sting Ray Robb", team: "Juncos Hollinger Racing", engine: "Chevrolet", color1: "#003DA5", color2: "#CE0E2D" },
+    { number: "4", name: "Caio Collet", team: "A.J. Foyt Enterprises", engine: "Chevrolet", color1: "#009639", color2: "#FFD100" },
+    { number: "24", name: "Jack Harvey", team: "Dreyer & Reinbold Racing", engine: "Chevrolet", color1: "#1C1C1C", color2: "#E4002B" }
 ];
+
+// === TEAM LOGO MAP ===
+const teamLogos = {
+    "Chip Ganassi Racing": "img/teams/ganassi_racing.png",
+    "ECR": "img/teams/ecr.png",
+    "Penske": "img/teams/team_penske.png",
+    "Meyer Shank Racing": "img/teams/meyer_shank_racing.png",
+    "A.J. Foyt Enterprises": "img/teams/foyt_enterprises.png",
+    "Arrow McClaren": "img/teams/arrow_mclaren.png",
+    "Dreyer & Reinbold Racing": "img/teams/dreyer_reinbold_racing.png",
+    "Juncos Hollinger Racing": "img/teams/juncos_hollinger.png",
+    "Rahal Letterman Lanigan Racing": "img/teams/rahal_letterman_lanigan.png",
+    "Andretti Global": "img/teams/andretti_global.png",
+    "Dale Coyne Racing": "img/teams/dale_coyne_racing.png",
+    "HMD Motorsports": "img/teams/hmd_foyt.png",
+    "Able Motorsports": "img/teams/abel_motorsports.png"
+};
+
+// Get unique teams for choices
+const uniqueTeams = [...new Set(drivers.map(d => d.team))];
 
 // === GAME STATE ===
 let gameState = {
+    mode: "driver", // "driver" or "team"
     difficulty: "medium",
     timeLimit: 5,
     totalCards: 33,
@@ -83,6 +104,14 @@ document.querySelectorAll(".cards-btn").forEach(btn => {
     });
 });
 
+document.querySelectorAll(".mode-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".mode-btn").forEach(b => b.classList.remove("selected"));
+        btn.classList.add("selected");
+        gameState.mode = btn.dataset.mode;
+    });
+});
+
 startBtn.addEventListener("click", startGame);
 playAgainBtn.addEventListener("click", () => showScreen(menuScreen));
 continueBtn.addEventListener("click", skipToNext);
@@ -125,46 +154,77 @@ function showQuestion() {
     questionCounter.textContent = `${gameState.currentQuestion + 1} / ${gameState.questions.length}`;
     scoreDisplay.textContent = `Score: ${gameState.score}`;
     
+    // Update question text based on mode
+    const carDisplayText = document.getElementById("car-display-text");
+    if (carDisplayText) {
+        carDisplayText.innerHTML = gameState.mode === "team" 
+            ? "<h1>Which team runs this car?</h1>" 
+            : "<h1>Who drives this car?</h1>";
+    }
+    
     // Show car image
     carDisplay.innerHTML = generateCarImage(current);
     
-    // Generate choices (1 correct + 3 wrong)
-    const wrongChoices = drivers
-        .filter(d => d.name !== current.name)
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 3);
-    
-    const allChoices = [current, ...wrongChoices].sort(() => Math.random() - 0.5);
-    
-    choicesDiv.innerHTML = "";
-    allChoices.forEach(choice => {
-        const btn = document.createElement("button");
-        btn.className = "choice-btn";
-        btn.textContent = choice.name;
-        btn.addEventListener("click", () => handleAnswer(btn, choice.name === current.name, current.name));
-        choicesDiv.appendChild(btn);
-    });
+    if (gameState.mode === "team") {
+        // Team mode: show team logos as choices
+        const correctTeam = current.team;
+        const wrongTeams = uniqueTeams
+            .filter(t => t !== correctTeam)
+            .sort(() => Math.random() - 0.5)
+            .slice(0, 3);
+        
+        const allTeamChoices = [correctTeam, ...wrongTeams].sort(() => Math.random() - 0.5);
+        
+        choicesDiv.innerHTML = "";
+        choicesDiv.classList.add("team-mode");
+        allTeamChoices.forEach(team => {
+            const btn = document.createElement("button");
+            btn.className = "choice-btn team-choice-btn";
+            btn.dataset.team = team;
+            btn.innerHTML = `<img src="${teamLogos[team]}" alt="${team}" class="team-logo-choice" />`;
+            btn.addEventListener("click", () => handleAnswer(btn, team === correctTeam, correctTeam));
+            choicesDiv.appendChild(btn);
+        });
+    } else {
+        // Driver mode: show driver names as text
+        const wrongChoices = drivers
+            .filter(d => d.name !== current.name)
+            .sort(() => Math.random() - 0.5)
+            .slice(0, 3);
+        
+        const allChoices = [current, ...wrongChoices].sort(() => Math.random() - 0.5);
+        
+        choicesDiv.innerHTML = "";
+        choicesDiv.classList.remove("team-mode");
+        allChoices.forEach(choice => {
+            const btn = document.createElement("button");
+            btn.className = "choice-btn";
+            btn.textContent = choice.name;
+            btn.addEventListener("click", () => handleAnswer(btn, choice.name === current.name, current.name));
+            choicesDiv.appendChild(btn);
+        });
+    }
     
     // Start timer
     startTimer();
 }
 
-function handleAnswer(btn, isCorrect, correctName) {
+function handleAnswer(btn, isCorrect, correctAnswer) {
     if (gameState.answered) return;
     gameState.answered = true;
     
     clearInterval(gameState.timerInterval);
     
-    // Disable all buttons
+    // Disable all buttons and highlight correct
     document.querySelectorAll(".choice-btn").forEach(b => {
         b.disabled = true;
-        if (b.textContent === correctName) {
+        const matchValue = gameState.mode === "team" ? b.dataset.team : b.textContent;
+        if (matchValue === correctAnswer) {
             b.classList.add("correct");
         }
     });
     
     if (isCorrect) {
-        // Score based on time remaining: tenths * 10 (e.g., 2.4s left = 24 tenths * 10 = 240 points)
         const pointsEarned = gameState.timeRemaining * 10;
         gameState.score += pointsEarned;
         gameState.correctCount++;
@@ -174,9 +234,8 @@ function handleAnswer(btn, isCorrect, correctName) {
         showFloatingPoints(pointsEarned, btn);
     } else {
         btn.classList.add("incorrect");
-        feedbackDiv.textContent = `Incorrect. The answer is ${correctName}.`;
+        feedbackDiv.textContent = `Incorrect. The answer is ${correctAnswer}.`;
         feedbackDiv.className = "feedback incorrect";
-        // Shake the car image
         carDisplay.classList.add("shake");
         setTimeout(() => carDisplay.classList.remove("shake"), 500);
     }
@@ -185,7 +244,6 @@ function handleAnswer(btn, isCorrect, correctName) {
     scoreDisplay.textContent = `Score: ${gameState.score}`;
     continueBtn.classList.remove("hidden");
     
-    // Auto-advance after 5 seconds
     gameState.autoAdvanceTimeout = setTimeout(advanceQuestion, 5000);
 }
 
@@ -194,21 +252,22 @@ function handleTimeout() {
     gameState.answered = true;
     
     const current = gameState.questions[gameState.currentQuestion];
+    const correctAnswer = gameState.mode === "team" ? current.team : current.name;
     
     // Disable all buttons and show correct
     document.querySelectorAll(".choice-btn").forEach(b => {
         b.disabled = true;
-        if (b.textContent === current.name) {
+        const matchValue = gameState.mode === "team" ? b.dataset.team : b.textContent;
+        if (matchValue === correctAnswer) {
             b.classList.add("correct");
         }
     });
     
-    feedbackDiv.textContent = `Time's up! The answer was ${current.name}.`;
+    feedbackDiv.textContent = `Time's up! The answer was ${correctAnswer}.`;
     feedbackDiv.className = "feedback incorrect";
     feedbackDiv.classList.remove("hidden");
     continueBtn.classList.remove("hidden");
     
-    // Auto-advance after 5 seconds
     gameState.autoAdvanceTimeout = setTimeout(advanceQuestion, 5000);
 }
 
