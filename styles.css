@@ -154,15 +154,18 @@ body {
 .start-btn {
     margin-top: 30px;
     padding: 18px 50px;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.3rem;
-    font-weight: 900;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
     background: #1a1a2e;
     color: #fff;
     border: none;
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.2s ease;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .start-btn:hover {
@@ -515,7 +518,7 @@ body {
 .study-card-back {
     display: none;
     padding: 20px;
-    background: #1a1a2e;
+    background: #fff;
     min-height: 160px;
     align-items: center;
     justify-content: center;
@@ -531,32 +534,41 @@ body {
 
 .study-back-content {
     text-align: center;
-    color: #fff;
+    color: #1a1a2e;
 }
 
 .study-back-content .study-name {
-    color: #fff;
-    font-size: 1.2rem;
+    color: #1a1a2e;
+    font-size: 1.3rem;
+    font-weight: 700;
     margin-bottom: 8px;
 }
 
 .study-back-content .study-team-text {
-    color: #ccc;
+    color: #555;
     font-size: 0.95rem;
 }
 
 .study-back-content .study-engine-text {
-    color: #aaa;
+    color: #888;
     font-size: 0.85rem;
     margin-top: 4px;
 }
 
 .study-back-content .study-logos {
-    margin-top: 12px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
 .study-back-content .study-manufacturer-logo {
-    filter: brightness(0) invert(1);
+    height: 18px;
+}
+
+.study-back-content .study-team-logo {
+    height: 40px;
 }
 
 .study-car-container {
@@ -584,14 +596,14 @@ body {
 /* Use a different approach for the number text */
 .study-card .study-corner-number {
     display: flex;
-    width: 52px;
-    height: 52px;
+    width: 56px;
+    height: 56px;
     border-width: 0;
     background: linear-gradient(135deg, #e63946 50%, transparent 50%);
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 5px 0 0 6px;
-    font-size: 0.95rem;
+    padding: 6px 0 0 7px;
+    font-size: 1.15rem;
     font-weight: 900;
     color: #fff;
 }
